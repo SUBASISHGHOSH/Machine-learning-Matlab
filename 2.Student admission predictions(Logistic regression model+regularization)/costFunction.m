@@ -22,6 +22,9 @@ grad = zeros(size(theta));
 z=sigmoid(X*theta);
 J=sum(-y.*log(z)-(1-y).*log(1-z))/m;
 
+%alternative code for J
+%J=(-y'*log(z)-(1-y)'*log(1-z))/m
+
 grad=(X'*(z-y))/m;
 
 
